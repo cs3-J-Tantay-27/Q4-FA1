@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>    
+    <title>Sign-Up Form</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="JC Nicole A. Tantay ">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="revised" content="04-04-2024">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <center>
+                <div class="ev">
+                    <h1>SIGN UP</h1>
+
+                    <div class="info">
+                        <label for="name">Name:</label><br>
+                        <input id="name" type="text"><br><br>
+                        <label for="usernme">Preferred username:</label><br>
+                        <input id="user" type="text"><br><br>
+                        <label for="psw">Password:</label><br>
+                        <input id="pass" type="password"><br><br>
+                        <label for="cpsw">Confirm Password:</label><br>
+                        <input id="cpass" type="text"><br><br>
+                        <label for="email">Email:</label><br> 
+                        <input id="email" type="email"><br><br>
+                        <label for="add">Address:</label><br> 
+                        <input id="add" type="text"></br></br>
+                        <label for="interests">Interests:</label><br> 
+                        <textarea rows="5" cols="60"></textarea><br><br>
+                    </div>
+
+                    <button type="reset" value="reset">reset</button>
+                    <button type="submit" onclick="submitt()">submit</button>
+                </div> 
+            </center> 
+        </fieldset>
+    </form>
+</body>
+
+<script>
+    function submitt() {
+        var pass = document.getElementById("pass").value;
+        var cpass = document.getElementById("cpass").value;
+
+        if (pass == cpass) {
+            window.alert("Thank you for Signing Up");
+        }
+
+        else {
+            window.alert("Passwords Do Not Match");
+        }
+    }
+
+</script>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightblue;
+    }
+
+    .info {
+        padding-left: 30px;
+        text-align: justify;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .ev {
+        margin-right: 300px;
+        margin-left: 300px;
+        border: 1px solid black;
+        background-color: azure;
+        padding-bottom: 20px;
+    }
+
+    input {
+        padding-right: 200px;
+        padding-bottom: 15px;
+    }
+
+    button {
+        padding: 7px;
+        border-radius: 5px;
+        border: 1px solid;
+        margin: 5px;
+    }
+
+    button:active {
+        background-color: lightsteelblue;
+    }
+</style>
+</html>
